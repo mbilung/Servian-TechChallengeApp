@@ -38,11 +38,11 @@
 
 I have used Azure as cloud hosting platform. Azure services used are as follows:
 
-- Azure Kubernetes Services (to host TechAppChallenge container and Postgres Server)
+- Azure Kubernetes Services - to host TechAppChallenge container and Postgres Server
 - Azure VNET and Subnet
-- Azure Container Registry (to act as an image repository when CI-CD pipeline is used)
-- Azure App Registration (to propagate correct roles to azure resources)
-- Azure Devops Services (to create CI and CD pipelines)
+- Azure Container Registry - to act as an image repository when CI-CD pipeline is used
+- Azure App Registration - to propagate correct roles to azure resources
+- Azure Devops Services - to create CI and CD pipelines
 
 ## Deploy infrastructure
 
@@ -125,4 +125,40 @@ http://20.23.149.33/
 
 ## CI CD
 
-## Improvement
+I am using Azure Devops as a CI tool to deploy TechApp to azure platform.
+
+yaml templates for the CI and CD pipelines can be found here:
+
+
+### Architecure of CI and CD pipeline
+
+### A write up on the CI and CD process
+
+- Code
+  - The TechApp application is hosted on github which is made available to azure devops through service connections.
+- Service connections
+  - Below are the required service connection in azure devops
+    - Github service connection - act as code repository
+    - Azure Container Registry (ACR) - to push images
+    - Azure Resource Manager - to deploy to azure resources
+    - AKS Service Connection - to run kubectl commands on AKS
+- Piplines
+  - pipelines are created using yaml and are multi-staged:
+    - build
+    - deploy
+
+### Build process
+
+Building the application is straightforward, docker tasks looks for the Dockerfile and starts building the app. Once the app is built, I am using azure devops pipeline tasks to push the image to Azure Container Registry (ACR) using the service connections.
+
+### Deployment process
+Once the build process completes, we will deploy the app through azure pipeline kubernetes tasks.
+- Refer the kubernetes manifest files
+- Use kubectl apply -f commands on the manifest files using azure pipeline kubernetes tasks
+
+## Improvements
+- The app deployed on AKS cab be secured with a SSL certificate
+- Modern tools like terraform can be used to deploy the azure platform
+- Key vault feature can be used to store keys
+- VNET and SUBNET can be further secured using NSG and firewalls
+
