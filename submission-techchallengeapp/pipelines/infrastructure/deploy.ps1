@@ -8,17 +8,23 @@
 # 2. VNET
 # 3. SUBNET
 # 4. Azure Kubernetes Services
+# 5. ACR (Azure Container Registry)
 #########################################################################
 # Script Varables Block
 $resourceGroup = "ServianTechapp-RG-WestEurope"
 $location = "westeurope" 
 $vnetName = "vnet-techapp"
 $subnetName = "subnet-techapp"
-$aksName = "servian-techapp-AKS"
+$aksName = "servian-techapp-aks"
+$acrName = "servian-acr"
 $subscriptionID = "f73e27ea-9e93-4f2e-9043-5fe661e47340" # change this value based on subscription in use
 #########################################################################
 # create resource group
 az group create --name $resourceGroup --location $location
+
+# create ACR
+az acr create --resource-group $resourceGroup `
+--name $acrName --sku Basic
 
 # create a service principal and store it in the file in the same folder
 az ad sp create-for-rbac > sp.json
