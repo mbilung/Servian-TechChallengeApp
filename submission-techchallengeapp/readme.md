@@ -1,1 +1,1 @@
-This folder contains the my solution to the TechChallengeApp.
+This folder contains my solution to the TechChallengeApp.
