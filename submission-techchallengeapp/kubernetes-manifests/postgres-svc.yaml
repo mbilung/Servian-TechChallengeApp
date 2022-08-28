@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: servian
+  name: postgres-cluster-ip-service
+spec:
+  selector:
+    component: postgres
+  type: ClusterIP
+  ports:
+  - port: 5432
+    targetPort: 5432
