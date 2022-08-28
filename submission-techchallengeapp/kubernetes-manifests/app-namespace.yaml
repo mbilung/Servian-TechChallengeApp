@@ -1,3 +1,4 @@
+# This manifest creates namesapce for the apps on AKS
 kind: Namespace
 apiVersion: v1
 metadata:
