@@ -28,7 +28,7 @@ az acr create --resource-group $resourceGroup `
 --name $acrName --sku Basic
 
 # create service principal, store it in a file in the same folder and propagate contributor role to resource groups
-az ad sp create-for-rbac --name $spnName --role contributor --scopes /subscriptions/$subscriptionID/resourceGroups/$resourceGroup > sp_aks.json
+az ad sp create-for-rbac --name $servicePrincipalName --role contributor --scopes /subscriptions/$subscriptionID/resourceGroups/$resourceGroup > sp_aks.json
 
 $jsonString = Get-Content -Path ./sp_aks.json
 $jsonObj = $jsonString | ConvertFrom-Json
