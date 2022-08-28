@@ -1,3 +1,4 @@
+# This manifest creates a service for the PostgresDB pod
 kind: Service
 apiVersion: v1
 metadata:
