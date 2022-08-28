@@ -44,7 +44,7 @@ I have used Azure as cloud hosting platform. Azure services used are as follows:
 - Azure App Registration - to propagate correct roles to azure resources
 - Azure Devops Services - to create CI and CD pipelines
 
-## Deploy infrastructure
+## Deploy Infrastructure
 
 Infrastructure is deployed with the help of azure cli and PowerShell Scripts.
 
