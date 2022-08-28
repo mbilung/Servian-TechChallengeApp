@@ -32,7 +32,7 @@ az ad sp create-for-rbac > sp.json
 $jsonString = Get-Content -Path ./sp.json
 $jsonObj = $jsonString | ConvertFrom-Json
 
-# extract client id and secret from the file generated 
+# extract service principal name from the file generated 
 $spnName = $jsonObj.displayName
 
 # create service principal and propagate contributor role to resource groups:
