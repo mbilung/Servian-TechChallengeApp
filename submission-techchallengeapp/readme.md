@@ -8,7 +8,7 @@
 - PowerShell script execution policy set to bypass, set it with the help of below command:
   - Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine
 
-## Brief overview of the folder structure
+## Overview of the folder structure
 ```
 ├───readme.md│     
 ├───architecture-diagrams
@@ -68,7 +68,7 @@ cd submission-techchallengeapp/deployment/infrastructure
 ```
 az login
 ```
-5. Provide the subscription id as a variable to the script <b>Deploy-Infrastructure.ps1</b>
+5. Provide the subscription id as a variable to the script: <b>Deploy-Infrastructure.ps1</b>
 
 6. Run the powershell script using the below command
 ```
@@ -76,7 +76,37 @@ az login
 ```
 
 7. Once the infrastructure is deployed, you will get the message: "Infrastructure Created Successfully"
-## Deploy app
+
+## Deploy TechApp
+
+TechApp and PostgresDB is deployed through Kubenretes Manifests.
+
+### Steps:
+
+1. Navigate to the sub-folder <b>techapp</b> which is under the folder <b>deployment</b>
+
+```
+cd submission-techchallengeapp/deployment/techapp
+```
+```
+├───deployment
+│   ├───infrastructure
+│   │       Deploy-Infrastructure.ps1
+│   │       
+│   └───techapp
+│           Create-ImagePullSecret.ps1
+│           Deploy-TechApp.ps1
+```
+
+2. Provide the azure subscription id as a variable to the script
+
+3. Run the below command:
+```
+./Deploy-TechApp
+```
+4. Once the TechApp gets deployed to AKS, login to azure and get the public ip created under services:
+
+
 
 ## CI CD
 
