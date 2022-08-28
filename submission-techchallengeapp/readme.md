@@ -161,4 +161,3 @@ Once the build process completes, we will deploy the app through azure pipeline 
 - Modern tools like terraform can be used to deploy the azure platform
 - Key vault feature can be used to store keys
 - VNET and SUBNET can be further secured using NSG and firewalls
-
