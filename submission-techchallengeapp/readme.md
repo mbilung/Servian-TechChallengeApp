@@ -49,29 +49,33 @@ Infrastructure is deployed with the help of azure cli and PowerShell Scripts.
 
 ### Steps:
 
-1. clone the repository 
+1. clone the repository https://github.com/mbilung/Servian-TechChallengeApp 
 
 2. Navigate to the sub-folder <b>infrastructure</b> which is under the folder <b>deployment</b>
 
 ```
-cd servian-submission\Servian-TechChallengeApp\submission-techchallengeapp
+cd submission-techchallengeapp/deployment/infrastructure
+```
+```
 ├───deployment
 │   ├───infrastructure
 │   │       Deploy-Infrastructure.ps1
 ```
 
-2. Make sure that you are on an elavated terminal and powershell execution policy is set to <b>Bypass</b>
+3. Make sure that you are on an elavated terminal and powershell execution policy is set to <b>Bypass</b>
 
-3. Login to azure using azure cli
+4. Login to azure using azure cli
 ```
 az login
 ```
-4. Provide the subscription id as a variable to the script <b>Deploy-Infrastructure.ps1</b>
+5. Provide the subscription id as a variable to the script <b>Deploy-Infrastructure.ps1</b>
 
-5. Run the powershell script using the below command
+6. Run the powershell script using the below command
 ```
 ./Deploy-Infrastructure.ps1
 ```
+
+7. Once the infrastructure is deployed, you will get the message: "Infrastructure Created Successfully"
 ## Deploy app
 
 ## CI CD
