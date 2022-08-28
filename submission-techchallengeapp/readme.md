@@ -10,7 +10,7 @@
 
 ## Overview of the folder structure
 ```
-├───readme.md│     
+├───readme.md
 ├───architecture-diagrams
 ├───CI-CD-pipeline
 ├───deployment
