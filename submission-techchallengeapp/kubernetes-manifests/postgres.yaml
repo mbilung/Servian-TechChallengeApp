@@ -1,3 +1,4 @@
+# This manifest creates a PostgresDB deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:

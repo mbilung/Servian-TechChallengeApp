@@ -16,7 +16,8 @@ $location = "westeurope"
 $vnetName = "vnet-techapp"
 $subnetName = "subnet-techapp"
 $aksName = "servian-techapp-aks"
-$acrName = "servian-acr"
+$acrName = "servianacr"
+$servicePrincipalName = "servianspn"
 $subscriptionID = "f73e27ea-9e93-4f2e-9043-5fe661e47340" # change this value based on subscription in use
 #########################################################################
 # create resource group
@@ -26,17 +27,11 @@ az group create --name $resourceGroup --location $location
 az acr create --resource-group $resourceGroup `
 --name $acrName --sku Basic
 
-# create a service principal and store it in the file in the same folder
-az ad sp create-for-rbac > sp.json
-
-$jsonString = Get-Content -Path ./sp.json
-$jsonObj = $jsonString | ConvertFrom-Json
-
-# extract service principal name from the file generated 
-$spnName = $jsonObj.displayName
-
-# create service principal and propagate contributor role to resource groups:
-az ad sp create-for-rbac --name $spnName --role contributor --scopes /subscriptions/$subscriptionID/resourceGroups/$resourceGroup > sp_aks.json
+# create service principal, store it in a file in the same folder and propagate contributor role to resource groups
+az ad sp create-for-rbac `
+--name $servicePrincipalName `
+--role contributor `
+--scopes /subscriptions/$subscriptionID/resourceGroups/$resourceGroup > sp_aks.json
 
 $jsonString = Get-Content -Path ./sp_aks.json
 $jsonObj = $jsonString | ConvertFrom-Json
@@ -68,3 +63,6 @@ az aks create `
 --service-principal $aks_clientId `
 --client-secret $aks_clientSecret `
 --vnet-subnet-id $SUBNET_ID
+
+Write-Output "Infrastructure Created Successfully"
+
