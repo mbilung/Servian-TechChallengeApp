@@ -105,6 +105,15 @@ cd submission-techchallengeapp/deployment/techapp
 ./Deploy-TechApp
 ```
 4. Once the TechApp gets deployed to AKS, login to azure and get the public ip created under services:
+![public ip assigned to ingress controller](https://user-images.githubusercontent.com/25122904/187092495-eec560a9-dc60-4fb0-a914-fe40b98105a0.png)
+
+5. Navigate to TechApp using the public ip provided
+```
+http://20.23.149.33/
+```
+6. TechApp is ready to serve requests:
+![TechApp hosted on AKS](https://user-images.githubusercontent.com/25122904/187092577-bb717b0d-0645-4226-af43-ff472d48faab.png)
+
 
 
 
