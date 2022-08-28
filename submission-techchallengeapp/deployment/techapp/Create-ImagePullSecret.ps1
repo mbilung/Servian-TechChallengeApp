@@ -1,7 +1,7 @@
 # Create an image pull secret
 # Prerequisite: create a namespace in AKS
 
-$jsonString = Get-Content -Path ../deployment/infrastructure/sp_aks.json
+$jsonString = Get-Content -Path ../../deployment/infrastructure/sp_aks.json
 $jsonObj = $jsonString | ConvertFrom-Json
 
 # service principal details to be used while AKS creation
