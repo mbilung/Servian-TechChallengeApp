@@ -135,7 +135,10 @@ http://20.23.149.33/
 I am using Azure Devops as a CI tool to deploy TechApp to azure platform.
 
 yaml templates for the CI and CD pipelines can be found here:
-Servian-TechChallengeApp\submission-techchallengeapp\CI-CD-pipeline\azure-pipeline.yaml
+```
+Servian-TechChallengeApp/submission-techchallengeapp/CI-CD-pipeline
+```
+
 ```
 ├───CI-CD-pipeline
 │   ├───azure-pipeline.yaml
