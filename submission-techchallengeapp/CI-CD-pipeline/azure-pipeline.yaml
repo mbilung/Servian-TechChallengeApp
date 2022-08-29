@@ -66,4 +66,4 @@ stages:
               namespace: servian
               command: apply
               useConfigurationFile: true
-              configuration: '$(Build.SourcesDirectory)/_mbilung_Servian-TechChallengeApp/submission-techchallengeapp/kubernetes-manifests/postgres.yaml'
+              configuration: '$(Build.SourcesDirectory)/submission-techchallengeapp/kubernetes-manifests/postgres.yaml'
