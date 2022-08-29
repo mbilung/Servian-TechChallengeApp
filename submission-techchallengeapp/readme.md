@@ -163,7 +163,7 @@ Servian-TechChallengeApp/submission-techchallengeapp/CI-CD-pipeline
     - Azure Container Registry (ACR) - to push images
     - Azure Resource Manager - to deploy to azure resources
     - AKS Service Connection - to run kubectl commands on AKS
-- Piplines
+- Pipelines
   - pipelines are created using yaml and are multi-staged:
     - build
     - deploy
