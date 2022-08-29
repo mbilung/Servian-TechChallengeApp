@@ -38,8 +38,8 @@ stages:
         tags: |
           $(Build.Buildnumber)
   
-- stage: Deploy_to_AKS
-  displayName: 'Promote_Build_to_AKS'
+- stage: Deploy to AKS
+  displayName: 'Promote Build to AKS'
   condition: succeeded('Build')
   dependsOn:
     - Build
@@ -47,7 +47,6 @@ stages:
   - deployment: Deploy_Development_Environment
     pool:
       vmImage: 'ubuntu'
-    environment: DEV
     strategy:
       runOnce:
         deploy:
@@ -57,4 +56,4 @@ stages:
              inputs:
               action: 'deploy'
               kubernetesServiceConnection: 'AKS'
-              manifests: 'Servian-TechChallengeApp\submission-techchallengeapp\kubernetes-manifests'
+              manifests: 'Servian-TechChallengeApp\submission-techchallengeapp\kubernetes-manifests\postgres.yaml'
