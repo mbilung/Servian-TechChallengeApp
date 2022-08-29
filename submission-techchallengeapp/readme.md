@@ -112,10 +112,10 @@ cd submission-techchallengeapp/deployment/techapp
 Usage: ./Deploy-TechApp.ps1 [<azure-subscription>]
 ```
 
-3. Select yes for both the prompts"
+3. Select yes for both the prompts:
 ```
-A different object named servian-techapp-aks already exists in your kubeconfig file.
-A different object named clusterUser_ServianTechapp-RG-WestEurope_servian-techapp-aks already exists in your kubeconfig file.
+A different object named servian-techapp-aks already exists in your kubeconfig file.(y/n)
+A different object named clusterUser_ServianTechapp-RG-WestEurope_servian-techapp-aks already exists in your kubeconfig file.(y/n)
 ```
 
 4. Once the TechApp gets deployed to AKS, login to azure and get the public ip created under services:
