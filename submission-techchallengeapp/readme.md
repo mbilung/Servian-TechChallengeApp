@@ -1,5 +1,6 @@
 
 # Servian Technical Challenge
+My take at the Servian Tech Challenge: https://github.com/servian/TechChallengeInstructions
 
 ## Prerequisites
 
@@ -11,30 +12,36 @@
 
 ## Overview of the folder structure
 ```
-├───readme.md
-├───architecture-diagrams
-├───CI-CD-pipeline
-├───deployment
-│   ├───infrastructure
-│   │       Deploy-Infrastructure.ps1
-│   │       
-│   └───techapp
-│           Create-ImagePullSecret.ps1
-│           Deploy-TechApp.ps1
-│           
-└───kubernetes-manifests
-        app-namespace.yaml
-        app-svc.yaml
-        ingress-nginx-controller.yaml
-        ingress-rule.yaml
-        postgres-pvc.yaml
-        postgres-svc.yaml
-        postgres.yaml
-        secret.yaml
-        servian-app.yaml
+│   
+└───Servian-TechChallengeApp
+    │       
+    ├───submission-techchallengeapp
+    │   ├───readme.md
+    │   │   
+    │   ├───CI-CD-pipeline
+    │   │       azure-pipeline.yaml
+    │   │       
+    │   ├───deployment
+    │   │   ├───infrastructure
+    │   │   │       Deploy-Infrastructure.ps1
+    │   │   │       
+    │   │   └───techapp
+    │   │           Create-ImagePullSecret.ps1
+    │   │           Deploy-TechApp.ps1
+    │   │           
+    │   └───kubernetes-manifests
+    │           app-namespace.yaml
+    │           app-svc.yaml
+    │           ingress-nginx-controller.yaml
+    │           ingress-rule.yaml
+    │           postgres-pvc.yaml
+    │           postgres-svc.yaml
+    │           postgres.yaml
+    │           secret.yaml
+    │           servian-app.yaml
 ```
 
-## Infrastructure overview
+## Infrastructure Architecture and Overview
 
 I have used Azure as cloud hosting platform. Azure services used are as follows:
 
@@ -128,7 +135,14 @@ http://20.23.149.33/
 I am using Azure Devops as a CI tool to deploy TechApp to azure platform.
 
 yaml templates for the CI and CD pipelines can be found here:
+```
+Servian-TechChallengeApp/submission-techchallengeapp/CI-CD-pipeline
+```
 
+```
+├───CI-CD-pipeline
+│   ├───azure-pipeline.yaml
+```
 
 ### Architecure of CI and CD pipeline
 
@@ -155,6 +169,18 @@ Building the application is straightforward, docker tasks looks for the Dockerfi
 Once the build process completes, we will deploy the app through azure pipeline kubernetes tasks.
 - Refer the kubernetes manifest files
 - Use kubectl apply -f commands on the manifest files using azure pipeline kubernetes tasks
+- Pull the image from ACR instead of docker resgistry
+
+### Service Connections in Azure Devops
+![image](https://user-images.githubusercontent.com/25122904/187134419-8d6bf47d-7d31-4625-9944-5295884ee612.png)
+
+### Multi-Staged yaml pipeline execution in Azure Devops
+![image](https://user-images.githubusercontent.com/25122904/187142445-bbb9b7ad-12e0-49a1-b59e-9402be3e2522.png)
+
+
+### Images pushed to ACR through azure devops pipelines
+![image](https://user-images.githubusercontent.com/25122904/187140646-1423ba1e-bd06-4030-a2a9-e0aedb821cc2.png)
+
 
 ## Improvements
 - The app deployed on AKS cab be secured with a SSL certificate

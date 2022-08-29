@@ -38,22 +38,26 @@ stages:
         tags: |
           $(Build.Buildnumber)
   
-- stage: Deploy to AKS
-  displayName: 'Promote Build to AKS'
+- stage: Deploy_to_AKS
+  displayName: 'Promote_Build_to_AKS'
   condition: succeeded('Build')
   dependsOn:
     - Build
   jobs:
   - deployment: Deploy_Development_Environment
     pool:
-      vmImage: 'ubuntu'
+      vmImage: 'ubuntu-latest'
+    environment: DEV
     strategy:
       runOnce:
         deploy:
          steps:
-           - task: KubernetesManifest@0
-             displayName: 'Deploy Postgres'
-             inputs:
-              action: 'deploy'
-              kubernetesServiceConnection: 'AKS'
-              manifests: 'Servian-TechChallengeApp\submission-techchallengeapp\kubernetes-manifests\postgres.yaml'
+          - checkout: self
+          - task: Kubernetes@1
+            displayName: 'kubectl apply'
+            inputs:
+              kubernetesServiceEndpoint: AKS
+              namespace: servian
+              command: apply
+              useConfigurationFile: true
+              configuration: '$(Build.SourcesDirectory)/submission-techchallengeapp/kubernetes-manifests/'
