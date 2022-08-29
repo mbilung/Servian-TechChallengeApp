@@ -33,6 +33,7 @@ My take at the Servian Tech Challenge: https://github.com/servian/TechChallengeI
     │   └───kubernetes-manifests
     │           app-namespace.yaml
     │           app-svc.yaml
+    │           horizontal-pod-autoscaler.yaml
     │           ingress-nginx-controller.yaml
     │           ingress-rule.yaml
     │           postgres-pvc.yaml
