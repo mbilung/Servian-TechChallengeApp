@@ -77,6 +77,9 @@ cd submission-techchallengeapp/deployment/infrastructure
 az login
 ```
 5. Provide the subscription id as a variable to the script: <b>Deploy-Infrastructure.ps1</b>
+```
+Edit line number:21 in the file: Deploy-Infrastructure.ps1
+```
 
 6. Run the powershell script using the below command
 ```
