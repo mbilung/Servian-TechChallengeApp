@@ -16,7 +16,7 @@ My take at the Servian Tech Challenge: https://github.com/servian/TechChallengeI
 └───Servian-TechChallengeApp
     │       
     ├───submission-techchallengeapp
-    │   │   readme.md
+    │   ├───readme.md
     │   │   
     │   ├───CI-CD-pipeline
     │   │       azure-pipeline.yaml
