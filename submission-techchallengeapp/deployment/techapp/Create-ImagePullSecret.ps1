@@ -4,7 +4,7 @@
 $jsonString = Get-Content -Path ../../deployment/infrastructure/sp_aks.json
 $jsonObj = $jsonString | ConvertFrom-Json
 
-# service principal details to be used while AKS creation
+# service principal details to be used
 $aks_clientId = $jsonObj.appId
 $aks_clientSecret = $jsonObj.password
 
