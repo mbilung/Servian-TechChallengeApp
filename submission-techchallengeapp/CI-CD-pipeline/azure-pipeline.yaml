@@ -57,4 +57,4 @@ stages:
              inputs:
               action: 'deploy'
               kubernetesServiceConnection: 'AKS'
-              manifests: '$(System.DefaultWorkingDirectory)/_mbilung_Servian-TechChallengeApp/submission-techchallengeapp/kubernetes-manifests/postgres.yaml'
+              manifests: '$(Build.SourcesDirectory)/_mbilung_Servian-TechChallengeApp/submission-techchallengeapp/kubernetes-manifests/postgres.yaml'
