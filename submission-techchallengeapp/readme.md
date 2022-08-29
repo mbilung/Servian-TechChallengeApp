@@ -51,6 +51,9 @@ I have used Azure as cloud hosting platform. Azure services used are as follows:
 - Azure App Registration - to propagate correct roles to azure resources
 - Azure Devops Services - to create CI and CD pipelines
 
+![servian-architecture-techappchallenge](https://user-images.githubusercontent.com/25122904/187151034-575b26b3-99eb-45ee-9826-7a4a0ecdc52e.png)
+
+
 ## Deploy Infrastructure
 
 Infrastructure is deployed with the help of azure cli and PowerShell Scripts.
@@ -77,6 +80,9 @@ cd submission-techchallengeapp/deployment/infrastructure
 az login
 ```
 5. Provide the subscription id as a variable to the script: <b>Deploy-Infrastructure.ps1</b>
+```
+Edit line number:21 in the file: Deploy-Infrastructure.ps1
+```
 
 6. Run the powershell script using the below command
 ```
