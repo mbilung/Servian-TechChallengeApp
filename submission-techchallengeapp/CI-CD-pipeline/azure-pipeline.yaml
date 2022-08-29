@@ -57,4 +57,4 @@ stages:
              inputs:
               action: 'deploy'
               kubernetesServiceConnection: 'AKS'
-              manifests: 'Servian-TechChallengeApp\submission-techchallengeapp\kubernetes-manifests\postgres.yaml'
+              manifests: 'submission-techchallengeapp/kubernetes-manifests/postgres.yaml'
