@@ -5,10 +5,18 @@
 # 2. kubectl, https://kubernetes.io/docs/tasks/tools/
 # 3. Subscription ID where AKS is deployed
 #########################################################################
+# Parameter Block
+param(
+    [Parameter()]
+    [string]$subscriptionID
+)
+#########################################################################
 # Open Cloud Shell or after installing azure cli on your local machine
 # Run the following commands
 
-az account set --subscription f73e27ea-9e93-4f2e-9043-5fe661e47340 # change the subscription id to the subscription you are using
+az account set --subscription $subscriptionID # change the subscription id to the subscription you are using
+
+Write-Output "subscription being used is: $subscriptionID"
 
 az aks get-credentials --resource-group ServianTechapp-RG-WestEurope --name servian-techapp-AKS
 
