@@ -46,7 +46,7 @@ stages:
   jobs:
   - deployment: Deploy_Development_Environment
     pool:
-      vmImage: 'ubuntu'
+      vmImage: 'ubuntu-latest'
     environment: DEV
     strategy:
       runOnce:
