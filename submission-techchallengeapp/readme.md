@@ -79,9 +79,9 @@ cd submission-techchallengeapp/deployment/infrastructure
 ```
 az login
 ```
-5. Provide the subscription id as a variable to the script: <b>Deploy-Infrastructure.ps1</b>
+5. Provide the subscription id as a command line argument to the script: <b>Deploy-Infrastructure.ps1</b>
 ```
-Edit line number:21 in the file: Deploy-Infrastructure.ps1
+Usage: ./Deploy-Infrastructure.ps1 [<azure-subscription>]
 ```
 
 6. Run the powershell script using the below command
@@ -112,7 +112,10 @@ cd submission-techchallengeapp/deployment/techapp
 │           Deploy-TechApp.ps1
 ```
 
-2. Provide the azure subscription id as a variable to the script
+2. Provide the subscription id as a command line argument to the script: <b>Deploy-TechApp.ps1</b>
+```
+Usage: ./Deploy-TechApp.ps1 [<azure-subscription>]
+```
 
 3. Run the below command:
 ```
