@@ -145,6 +145,7 @@ Servian-TechChallengeApp/submission-techchallengeapp/CI-CD-pipeline
 ```
 
 ### Architecure of CI and CD pipeline
+![16617614367441111](https://user-images.githubusercontent.com/25122904/187158064-16e48b29-f4fb-480d-879d-cf369cf14b61.jpg)
 
 ### A write up on the CI and CD process
 
