@@ -12,25 +12,34 @@ My take at the Servian Tech Challenge: https://github.com/servian/TechChallengeI
 
 ## Overview of the folder structure
 ```
-├───readme.md
-├───CI-CD-pipeline
-│   ├───azure-pipeline.yaml
-├───deployment
-│   ├───infrastructure
-│   │       Deploy-Infrastructure.ps1    
-│   └───techapp
-│           Create-ImagePullSecret.ps1
-│           Deploy-TechApp.ps1     
-└───kubernetes-manifests
-        app-namespace.yaml
-        app-svc.yaml
-        ingress-nginx-controller.yaml
-        ingress-rule.yaml
-        postgres-pvc.yaml
-        postgres-svc.yaml
-        postgres.yaml
-        secret.yaml
-        servian-app.yaml
+│   
+└───Servian-TechChallengeApp
+    │       
+    ├───submission-techchallengeapp
+    │   │   readme.md
+    │   │   
+    │   ├───architecture-diagrams
+    │   ├───CI-CD-pipeline
+    │   │       azure-pipeline.yaml
+    │   │       
+    │   ├───deployment
+    │   │   ├───infrastructure
+    │   │   │       Deploy-Infrastructure.ps1
+    │   │   │       
+    │   │   └───techapp
+    │   │           Create-ImagePullSecret.ps1
+    │   │           Deploy-TechApp.ps1
+    │   │           
+    │   └───kubernetes-manifests
+    │           app-namespace.yaml
+    │           app-svc.yaml
+    │           ingress-nginx-controller.yaml
+    │           ingress-rule.yaml
+    │           postgres-pvc.yaml
+    │           postgres-svc.yaml
+    │           postgres.yaml
+    │           secret.yaml
+    │           servian-app.yaml
 ```
 
 ## Infrastructure Architecture and Overview
@@ -127,7 +136,11 @@ http://20.23.149.33/
 I am using Azure Devops as a CI tool to deploy TechApp to azure platform.
 
 yaml templates for the CI and CD pipelines can be found here:
-
+Servian-TechChallengeApp\submission-techchallengeapp\CI-CD-pipeline\azure-pipeline.yaml
+```
+├───CI-CD-pipeline
+│   ├───azure-pipeline.yaml
+```
 
 ### Architecure of CI and CD pipeline
 
