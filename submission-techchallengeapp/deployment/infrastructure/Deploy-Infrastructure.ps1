@@ -10,6 +10,12 @@
 # 4. Azure Kubernetes Services
 # 5. ACR (Azure Container Registry)
 #########################################################################
+# Parameter Block
+param(
+    [Parameter()]
+    [string]$subscriptionID
+)
+#########################################################################
 # Script Varables Block
 $resourceGroup = "ServianTechapp-RG-WestEurope"
 $location = "westeurope" 
@@ -18,7 +24,7 @@ $subnetName = "subnet-techapp"
 $aksName = "servian-techapp-aks"
 $acrName = "servianacr"
 $servicePrincipalName = "servianspn"
-$subscriptionID = "f73e27ea-9e93-4f2e-9043-5fe661e47340" # change this value based on subscription in use
+Write-Output "subscription being used is: $subscriptionID"
 #########################################################################
 # create resource group
 az group create --name $resourceGroup --location $location
