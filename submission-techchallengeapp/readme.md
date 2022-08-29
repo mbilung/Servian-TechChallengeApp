@@ -1,5 +1,6 @@
 
 # Servian Technical Challenge
+My take at the Servian TechAppChallenge: https://github.com/servian/TechChallengeInstructions
 
 ## Prerequisites
 
@@ -155,6 +156,12 @@ Building the application is straightforward, docker tasks looks for the Dockerfi
 Once the build process completes, we will deploy the app through azure pipeline kubernetes tasks.
 - Refer the kubernetes manifest files
 - Use kubectl apply -f commands on the manifest files using azure pipeline kubernetes tasks
+
+### Service Connections on Azure Devops
+![image](https://user-images.githubusercontent.com/25122904/187134419-8d6bf47d-7d31-4625-9944-5295884ee612.png)
+
+### Multi-Staged yaml pipeline execution on Azure Devops
+
 
 ## Improvements
 - The app deployed on AKS cab be secured with a SSL certificate
