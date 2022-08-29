@@ -169,6 +169,7 @@ Building the application is straightforward, docker tasks looks for the Dockerfi
 Once the build process completes, we will deploy the app through azure pipeline kubernetes tasks.
 - Refer the kubernetes manifest files
 - Use kubectl apply -f commands on the manifest files using azure pipeline kubernetes tasks
+- Pull the image from ACR instead of docker resgistry
 
 ### Service Connections in Azure Devops
 ![image](https://user-images.githubusercontent.com/25122904/187134419-8d6bf47d-7d31-4625-9944-5295884ee612.png)
