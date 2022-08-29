@@ -7,6 +7,7 @@ My take at the Servian Tech Challenge: https://github.com/servian/TechChallengeI
 - azure cli 
 - kubectl 
 - elevated powershell/vscode terminal
+- Have contributor role assigned to you by your Azure admin on the subscription which you plan to use
 - PowerShell script execution policy set to bypass, set it with the help of below command:
   - Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine
 
