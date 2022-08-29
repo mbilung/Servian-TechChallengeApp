@@ -38,7 +38,7 @@ stages:
         tags: |
           $(Build.Buildnumber)
   
-- stage: Deploy to AKS
+- stage: Deploy_to_AKS
   displayName: 'Promote_Build_to_AKS'
   condition: succeeded('Build')
   dependsOn:
@@ -47,6 +47,7 @@ stages:
   - deployment: Deploy_Development_Environment
     pool:
       vmImage: 'ubuntu'
+    environment: DEV
     strategy:
       runOnce:
         deploy:
