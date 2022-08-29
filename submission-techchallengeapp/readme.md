@@ -84,11 +84,6 @@ az login
 Usage: ./Deploy-Infrastructure.ps1 [<azure-subscription>]
 ```
 
-6. Run the powershell script using the below command
-```
-./Deploy-Infrastructure.ps1
-```
-
 7. Once the infrastructure is deployed, you will get the message: "Infrastructure Created Successfully"
 
 ## Deploy TechApp
@@ -117,24 +112,20 @@ cd submission-techchallengeapp/deployment/techapp
 Usage: ./Deploy-TechApp.ps1 [<azure-subscription>]
 ```
 
-3. Run the below command:
-```
-./Deploy-TechApp
-```
-4. Once the TechApp gets deployed to AKS, login to azure and get the public ip created under services:
+3. Once the TechApp gets deployed to AKS, login to azure and get the public ip created under services:
 ![public ip assigned to ingress controller](https://user-images.githubusercontent.com/25122904/187092495-eec560a9-dc60-4fb0-a914-fe40b98105a0.png)
 
 | **IP Address will change for each deployment, IP Addresses used below are as examples** |
 | ------------- | 
 
-5. Navigate to TechApp using the public ip provided
+4. Navigate to TechApp using the public ip provided
 ```
 http://20.23.149.33/
 ```
-6. TechApp is ready to serve requests:
+5. TechApp is ready to serve requests:
 ![TechApp hosted on AKS](https://user-images.githubusercontent.com/25122904/187092577-bb717b0d-0645-4226-af43-ff472d48faab.png)
 
-7. Healthchecks done to determine database connectivity status (http://20.23.149.33/healthcheck)
+6. Healthchecks done to determine database connectivity status (http://20.23.149.33/healthcheck)
 ![image](https://user-images.githubusercontent.com/25122904/187092684-09d57e06-2c18-483c-a7b8-a264625352a0.png)
 
 
