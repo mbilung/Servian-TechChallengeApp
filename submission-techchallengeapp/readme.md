@@ -82,6 +82,7 @@ az login
 5. Provide the subscription id as a command line argument to the script: <b>Deploy-Infrastructure.ps1</b>
 ```
 Usage: ./Deploy-Infrastructure.ps1 [<azure-subscription>]
+example: ./Deploy-Infrastructure.ps1 f73e27ea-9e93-4f2e-9043-5fe661e47340
 ```
 
 7. Once the infrastructure is deployed, you will get the message: "Infrastructure Created Successfully"
@@ -110,6 +111,7 @@ cd submission-techchallengeapp/deployment/techapp
 2. Provide the subscription id as a command line argument to the script: <b>Deploy-TechApp.ps1</b>
 ```
 Usage: ./Deploy-TechApp.ps1 [<azure-subscription>]
+example: ./Deploy-TechApp.ps1 f73e27ea-9e93-4f2e-9043-5fe661e47340
 ```
 
 3. Select 'yes' if you encounter these prompts:
