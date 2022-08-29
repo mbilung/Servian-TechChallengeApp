@@ -52,9 +52,17 @@ stages:
       runOnce:
         deploy:
          steps:
-           - task: KubernetesManifest@0
-             displayName: 'Deploy Postgres'
-             inputs:
-              action: 'deploy'
-              kubernetesServiceConnection: 'AKS'
-              manifests: '$(Build.SourcesDirectory)/_mbilung_Servian-TechChallengeApp/submission-techchallengeapp/kubernetes-manifests/postgres.yaml'
+          #- task: KubernetesManifest@0
+            #displayName: 'Deploy Postgres'
+            #inputs:
+              #action: 'deploy'
+              #kubernetesServiceConnection: 'AKS'
+              #manifests: '$(Build.SourcesDirectory)/_mbilung_Servian-TechChallengeApp/submission-techchallengeapp/kubernetes-manifests/postgres.yaml'
+          - task: Kubernetes@1
+            displayName: 'kubectl apply'
+            inputs:
+              kubernetesServiceEndpoint: AKS
+              namespace: servian
+              command: apply
+              useConfigurationFile: true
+              configuration: '$(System.DefaultWorkingDirectory)/_mbilung_Servian-TechChallengeApp/submission-techchallengeapp/kubernetes-manifests/postgres.yaml'
