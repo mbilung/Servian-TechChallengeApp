@@ -1,6 +1,6 @@
 
 # Servian Technical Challenge
-My take at the Servian TechAppChallenge: https://github.com/servian/TechChallengeInstructions
+My take at the Servian Tech Challenge: https://github.com/servian/TechChallengeInstructions
 
 ## Prerequisites
 
