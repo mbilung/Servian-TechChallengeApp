@@ -137,7 +137,7 @@ http://20.23.149.33/
 7. Healthchecks done to determine database connectivity status (http://20.23.149.33/healthcheck)
 ![image](https://user-images.githubusercontent.com/25122904/187092684-09d57e06-2c18-483c-a7b8-a264625352a0.png)
 
-
+8. Horizontal pod autoscaling is implemented through kubernetes HorizontalPodAutoscaler
 
 ## CI CD
 
