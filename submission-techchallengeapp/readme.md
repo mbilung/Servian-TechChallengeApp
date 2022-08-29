@@ -13,16 +13,14 @@ My take at the Servian Tech Challenge: https://github.com/servian/TechChallengeI
 ## Overview of the folder structure
 ```
 ├───readme.md
-├───architecture-diagrams
 ├───CI-CD-pipeline
+│   ├───azure-pipeline.yaml
 ├───deployment
 │   ├───infrastructure
-│   │       Deploy-Infrastructure.ps1
-│   │       
+│   │       Deploy-Infrastructure.ps1    
 │   └───techapp
 │           Create-ImagePullSecret.ps1
-│           Deploy-TechApp.ps1
-│           
+│           Deploy-TechApp.ps1     
 └───kubernetes-manifests
         app-namespace.yaml
         app-svc.yaml
@@ -35,7 +33,7 @@ My take at the Servian Tech Challenge: https://github.com/servian/TechChallengeI
         servian-app.yaml
 ```
 
-## Infrastructure overview
+## Infrastructure Architecture and Overview
 
 I have used Azure as cloud hosting platform. Azure services used are as follows:
 
