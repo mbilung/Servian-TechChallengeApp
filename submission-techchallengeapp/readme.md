@@ -155,10 +155,15 @@ Once the build process completes, we will deploy the app through azure pipeline 
 - Refer the kubernetes manifest files
 - Use kubectl apply -f commands on the manifest files using azure pipeline kubernetes tasks
 
-### Service Connections on Azure Devops
+### Service Connections in Azure Devops
 ![image](https://user-images.githubusercontent.com/25122904/187134419-8d6bf47d-7d31-4625-9944-5295884ee612.png)
 
-### Multi-Staged yaml pipeline execution on Azure Devops
+### Multi-Staged yaml pipeline execution in Azure Devops
+![image](https://user-images.githubusercontent.com/25122904/187142445-bbb9b7ad-12e0-49a1-b59e-9402be3e2522.png)
+
+
+### Images pushed to ACR through azure devops pipelines
+![image](https://user-images.githubusercontent.com/25122904/187140646-1423ba1e-bd06-4030-a2a9-e0aedb821cc2.png)
 
 
 ## Improvements
