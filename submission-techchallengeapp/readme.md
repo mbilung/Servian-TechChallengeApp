@@ -112,7 +112,7 @@ cd submission-techchallengeapp/deployment/techapp
 Usage: ./Deploy-TechApp.ps1 [<azure-subscription>]
 ```
 
-3. Select yes for both the prompts:
+3. Select 'yes' if you encounter these prompts:
 ```
 A different object named servian-techapp-aks already exists in your kubeconfig file.(y/n)
 A different object named clusterUser_ServianTechapp-RG-WestEurope_servian-techapp-aks already exists in your kubeconfig file.(y/n)
