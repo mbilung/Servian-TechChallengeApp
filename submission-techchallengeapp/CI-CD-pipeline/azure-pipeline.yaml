@@ -52,6 +52,7 @@ stages:
       runOnce:
         deploy:
          steps:
+          - checkout: self
           #- task: KubernetesManifest@0
             #displayName: 'Deploy Postgres'
             #inputs:
