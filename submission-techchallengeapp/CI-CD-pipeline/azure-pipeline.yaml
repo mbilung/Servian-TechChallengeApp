@@ -39,7 +39,7 @@ stages:
           $(Build.Buildnumber)
   
 - stage: Deploy to AKS
-  displayName: 'Promote Build to AKS'
+  displayName: 'Promote_Build_to_AKS'
   condition: succeeded('Build')
   dependsOn:
     - Build
